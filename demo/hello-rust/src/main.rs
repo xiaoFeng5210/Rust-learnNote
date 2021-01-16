@@ -9,6 +9,8 @@ fn main() {
 
     println!("Please input your guess.");
     io::stdin().read_line(&mut _guess).expect("Failed to line"); // &符号表示这是一个引用， &mut表示这是一个可变的引用
+
+    println!("You guessed: {}", _guess);
 }
 
 
