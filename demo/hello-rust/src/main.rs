@@ -13,7 +13,8 @@ fn main() {
     // println!("You guessed: {}", _guess);
 
     let rect1 = Rectangle { width: 30, height: 50 };
-    println!("the rectangle is {}", rect1.area());
+    let param = Rectangle { width: 20, height: 10};
+    println!("{:#?}", rect1.can_hold(&param));
 }
 
 #[derive(Debug)]
@@ -34,8 +35,6 @@ impl Rectangle {
     fn square(size: u32) -> Rectangle {
         Rectangle { width: size, height: size }
     }
-
-
 }
 
 
