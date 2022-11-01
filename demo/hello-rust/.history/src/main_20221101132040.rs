@@ -15,8 +15,6 @@ fn main() {
     let rect1 = Rectangle { width: 30, height: 50 };
     let param = Rectangle { width: 20, height: 10};
     println!("{:#?}", rect1.can_hold(&param));
-    println!("hello world")
-    
 }
 
 #[derive(Debug)]
