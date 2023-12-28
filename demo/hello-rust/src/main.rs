@@ -1,5 +1,6 @@
 // use ferris_says::say;
 use std::io;
+use rand::Rng;
 
 fn main() {
     // let stdout = stdout();
