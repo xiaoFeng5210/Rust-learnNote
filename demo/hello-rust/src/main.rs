@@ -7,7 +7,8 @@ fn main() {
     // if_message();
     // test_loop();
     // while_loop();
-    for_loop();
+    // for_loop();
+    mutableReference();
 }
 
 fn guess_number() {
@@ -18,6 +19,27 @@ fn guess_number() {
     let mut guess = String::new();
     io::stdin().read_line(&mut guess).expect("Failed to read line");
     println!("you guessed: {}", guess)
+}
+
+fn no_dangle() -> String {
+    let s = String::from("hello");
+    s
+}
+
+fn dangle() -> &String {
+    let s = String::from("hello");
+    &s  // 返回s的引用,这里是空指针，因为s在函数结束后会被释放
+}
+
+fn mutableReference() {
+    let mut s = String::from("hello");
+    change(&mut s);
+    println!("{}", s);
+}
+
+fn change(s: &mut String) {
+    s.push_str(", world");
+    println!("{}", s);
 }
 
 fn for_loop() {
