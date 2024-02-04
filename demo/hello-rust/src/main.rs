@@ -18,6 +18,5 @@ fn guess_number() {
 
 // for循环
 fn for_loop() {
-    let mut x = 200;
     
 }
