@@ -1,14 +1,33 @@
 // use ferris_says::say;
 use std::io;
 use rand::Rng;
+// 引入./所有权/owner_ship.rs 的函数
+#[derive(Debug)]
+
+struct Test {
+    id: i32,
+    name: String,
+    address: String
+}
+
 
 fn main() {
-    // guess_number();
-    // if_message();
-    // test_loop();
-    // while_loop();
-    // for_loop();
-    mutableReference();
+    print_struct()
+}
+
+fn print_struct() {
+    let test_data = Test {
+        id: 1,
+        name: String::from("xiaofeng"),
+        address: String::from("徐州春雨花园")
+    };
+    println!("{:?}", test_data)
+}
+
+fn slice_test() {
+    let s = String::from("hello_world");
+    let a = &s[..1];
+    println!("{}", a);
 }
 
 fn guess_number() {
@@ -26,10 +45,10 @@ fn no_dangle() -> String {
     s
 }
 
-fn dangle() -> &String {
-    let s = String::from("hello");
-    &s  // 返回s的引用,这里是空指针，因为s在函数结束后会被释放
-}
+// fn dangle() -> &String {
+//     let s = String::from("hello");
+//     &s  // 返回s的引用,这里是空指针，因为s在函数结束后会被释放
+// }
 
 fn mutableReference() {
     let mut s = String::from("hello");
