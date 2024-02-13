@@ -12,15 +12,51 @@ struct Test {
 
 
 fn main() {
-    print_struct()
+    let string1 = String::from("long string is long");
+    let result;
+    {
+        let string2 = String::from("xyz");
+        result = longest(string1.as_str(), string2.as_str());
+    };
+    println!("The longest string is {}", result);
 }
 
+fn longest<'a>(x: &'a str, y: &str) -> &'a str {
+    if x.len() > y.len() {
+        x
+    } else {
+        "111"
+    }
+}
+
+
+#[derive(Debug)]
+struct Animal {
+    dog: String,
+    cat: String,
+    index: i32
+}
+
+impl Animal {
+    fn new(dog: String, cat: String, index: i32) -> Self {
+        Animal {
+            dog, cat, index
+        }
+    }
+
+    fn getDog(&self) -> &str {
+        self.dog.as_str()
+    }
+}
+
+
 fn print_struct() {
-    let test_data = Test {
+    let mut test_data = Test {
         id: 1,
         name: String::from("xiaofeng"),
         address: String::from("徐州春雨花园")
     };
+    test_data.id = 2;
     println!("{:?}", test_data)
 }
 
