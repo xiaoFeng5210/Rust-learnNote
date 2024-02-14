@@ -1,47 +1,41 @@
 // use ferris_says::say;
-use std::io;
 use rand::Rng;
+use std::io;
 // 引入./所有权/owner_ship.rs 的函数
 #[derive(Debug)]
 
 struct Test {
     id: i32,
     name: String,
-    address: String
+    address: String,
 }
 
-
 fn main() {
-    let string1 = String::from("long string is long");
+    let string1 = String::from("zhangqingfeng is very good");
     let result;
-    {
-        let string2 = String::from("xyz");
-        result = longest(string1.as_str(), string2.as_str());
-    };
+    let string2 = String::from("xyz");
+    result = longest(string1.as_str(), string2.as_str());
     println!("The longest string is {}", result);
 }
 
-fn longest<'a>(x: &'a str, y: &str) -> &'a str {
-    if x.len() > y.len() {
+fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
+    if x.len() < y.len() {
         x
     } else {
-        "111"
+        y
     }
 }
-
 
 #[derive(Debug)]
 struct Animal {
     dog: String,
     cat: String,
-    index: i32
+    index: i32,
 }
 
 impl Animal {
     fn new(dog: String, cat: String, index: i32) -> Self {
-        Animal {
-            dog, cat, index
-        }
+        Animal { dog, cat, index }
     }
 
     fn getDog(&self) -> &str {
@@ -49,12 +43,11 @@ impl Animal {
     }
 }
 
-
 fn print_struct() {
     let mut test_data = Test {
         id: 1,
         name: String::from("xiaofeng"),
-        address: String::from("徐州春雨花园")
+        address: String::from("徐州春雨花园"),
     };
     test_data.id = 2;
     println!("{:?}", test_data)
@@ -72,7 +65,9 @@ fn guess_number() {
     let secret_number = rand::thread_rng().gen_range(1..=100);
     println!("The secret number is: {}", secret_number);
     let mut guess = String::new();
-    io::stdin().read_line(&mut guess).expect("Failed to read line");
+    io::stdin()
+        .read_line(&mut guess)
+        .expect("Failed to read line");
     println!("you guessed: {}", guess)
 }
 
@@ -100,7 +95,7 @@ fn change(s: &mut String) {
 fn for_loop() {
     let a = [10, 20, 30, 40, 50];
     for element in a {
-        println!("the value is: {}", element);                                                                                                                                                                                                                        
+        println!("the value is: {}", element);
     }
     for number in (1..=4).rev() {
         println!("{}!", number);
