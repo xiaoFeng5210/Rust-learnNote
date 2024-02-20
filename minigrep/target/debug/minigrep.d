@@ -1,1 +1,1 @@
-/Users/xiaofeng/Documents/github/Rust-learnNote/minigrep/target/debug/minigrep: /Users/xiaofeng/Documents/github/Rust-learnNote/minigrep/src/main.rs
+/Users/xiaofeng/Documents/github/Rust-learnNote/minigrep/target/debug/minigrep: /Users/xiaofeng/Documents/github/Rust-learnNote/minigrep/src/lib.rs /Users/xiaofeng/Documents/github/Rust-learnNote/minigrep/src/main.rs
