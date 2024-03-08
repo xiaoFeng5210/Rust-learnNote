@@ -1,4 +1,4 @@
-fn test_owner_ship() {
+pub mod fn test_owner_ship() {
   let x = String::new('hello')
   owner_ship_print(x)
 }
