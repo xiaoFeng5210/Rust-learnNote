@@ -1,7 +1,9 @@
 // use ferris_says::say;
 use rand::Rng;
 use std::io;
-// 引入./所有权/owner_ship.rs 的函数
+use hello_rust::slice::slice_test;
+
+
 #[derive(Debug)]
 
 struct Test {
@@ -11,10 +13,20 @@ struct Test {
 }
 
 fn main() {
-
+    slice_test::test();
 }
 
 // 数组
+// fn testFindFromArray() {
+//     let a = vec![1, 2, 3, 4, 5];
+//     let mut index = 0;
+//     for i in a {
+//         if i == 3 {
+//             index = a.iter().position(|&x| -> {x == i});
+//             println!("{}", index);
+//         }
+//     }
+// }
 
 fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     if x.len() < y.len() {

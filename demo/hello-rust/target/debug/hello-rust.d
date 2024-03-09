@@ -1,1 +1,1 @@
-/Users/xiaofeng/Documents/github/Rust-learnNote/demo/hello-rust/target/debug/hello-rust: /Users/xiaofeng/Documents/github/Rust-learnNote/demo/hello-rust/src/main.rs
+/Users/xiaofeng/Documents/github/Rust-learnNote/demo/hello-rust/target/debug/hello-rust: /Users/xiaofeng/Documents/github/Rust-learnNote/demo/hello-rust/src/lib.rs /Users/xiaofeng/Documents/github/Rust-learnNote/demo/hello-rust/src/main.rs /Users/xiaofeng/Documents/github/Rust-learnNote/demo/hello-rust/src/owner/mod.rs /Users/xiaofeng/Documents/github/Rust-learnNote/demo/hello-rust/src/owner/owner_ship.rs
