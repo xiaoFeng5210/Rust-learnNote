@@ -1,7 +1,7 @@
 // use ferris_says::say;
 use rand::Rng;
 use std::io;
-use hello_rust::slice::slice_test;
+use hello_rust::closure::closure_test;
 
 
 #[derive(Debug)]
@@ -13,7 +13,7 @@ struct Test {
 }
 
 fn main() {
-    slice_test::test();
+    closure_test::test();
 }
 
 // 数组
